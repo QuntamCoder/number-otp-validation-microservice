@@ -1,4 +1,4 @@
-![WhatsApp Image 2025-07-09 at 00 04 00_585f93d0](https://github.com/user-attachments/assets/ff99c0af-7d31-4aeb-ba4d-ed807b76b5c2)# OTP Validator – Spring Boot Backend & React Frontend
+# OTP Validator – Spring Boot Backend & React Frontend
 
 A simple project for OTP (One Time Password) validation with a **React.js** frontend and a **Spring Boot** backend.  
 Supports sending and verifying OTPs via a REST API, with Supabase/PostgreSQL as the database.
