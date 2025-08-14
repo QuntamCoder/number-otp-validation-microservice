@@ -23,7 +23,6 @@ public class OtpService {
         request.setExpiryTime(LocalDateTime.now().plusMinutes(5));
         otpRequestRepository.save(request);
 
-        // Here, integrate with SMS provider to send the OTP on mobileNumber
         System.out.println("OTP for " + mobileNumber + ": " + otp);
 
         return otp;
@@ -32,7 +31,7 @@ public class OtpService {
     public boolean validateOtp(String mobileNumber, String otp) {
         List<OtpRequest> reqs = otpRequestRepository.findByMobileNumberOrderByExpiryTimeDesc(mobileNumber);
         if (reqs.isEmpty()) return false;
-        OtpRequest latest = reqs.get(0); // latest request
+        OtpRequest latest = reqs.get(0); 
         return latest.getOtp().equals(otp) && latest.getExpiryTime().isAfter(LocalDateTime.now());
     }
 }
